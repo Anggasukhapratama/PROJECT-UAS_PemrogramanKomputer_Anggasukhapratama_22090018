@@ -14,19 +14,28 @@ import javax.swing.JOptionPane;
  * @author ASUS
  */
 public class KoneksiDatabase {
-     public static Connection BukaKoneksi() {
-        try {
-            Class.forName("com.mysql.jdbc.Driver");
-            Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/", "root", "");
-            return cn;
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Driver tidak ditemukan.");
-        } catch (SQLException e) {
-            e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Koneksi ke database gagal.");
-        }
-        return null;
+    private static Connection KoneksiDatabase;
+     public static Connection getKoneksi() {
+         if (KoneksiDatabase==null){
+             try {
+                  String url;
+                  url= "jdbc:mysql://localhost:3306/adminlogin";
+                  String ussername ="root";
+                  String password = "";
+                  DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+                  KoneksiDatabase =  DriverManager.getConnection(url,ussername,password);
+                   
+             } catch (SQLException t) {
+                 JOptionPane.showMessageDialog(null, "error koneksi");
+             }
+            
+         }return KoneksiDatabase;
+     }static Object getConnection(){
+         throw new UnsupportedOperationException("Not Yet implemented");
+         
+         }
+             
+        
     }
     
 }
