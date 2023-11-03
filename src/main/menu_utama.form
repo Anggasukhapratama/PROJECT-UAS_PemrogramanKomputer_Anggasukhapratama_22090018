@@ -50,7 +50,7 @@
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="652" max="32767" attributes="0"/>
+                  <EmptySpace pref="569" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -86,7 +86,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="PETSHOP (FETAMI)"/>
+            <Property name="text" type="java.lang.String" value="PETSHOP (JAYA MAKMUR)"/>
           </Properties>
         </Component>
       </SubComponents>

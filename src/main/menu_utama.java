@@ -61,7 +61,7 @@ public class menu_utama extends javax.swing.JFrame {
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Sitka Text", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("PETSHOP (FETAMI)");
+        jLabel2.setText("PETSHOP (JAYA MAKMUR)");
 
         javax.swing.GroupLayout pn_navbarLayout = new javax.swing.GroupLayout(pn_navbar);
         pn_navbar.setLayout(pn_navbarLayout);
@@ -72,7 +72,7 @@ public class menu_utama extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
-                .addContainerGap(652, Short.MAX_VALUE))
+                .addContainerGap(569, Short.MAX_VALUE))
         );
         pn_navbarLayout.setVerticalGroup(
             pn_navbarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

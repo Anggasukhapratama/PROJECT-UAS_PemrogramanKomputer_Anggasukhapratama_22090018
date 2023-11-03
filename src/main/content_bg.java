@@ -45,7 +45,7 @@ public class content_bg extends javax.swing.JPanel {
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 0, 755, 610));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bluecat_logo (2).png"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 180, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 130, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Perpetua Titling MT", 1, 24)); // NOI18N
         jLabel3.setText("Petshop");
@@ -53,7 +53,7 @@ public class content_bg extends javax.swing.JPanel {
 
         jLabel4.setFont(new java.awt.Font("Rockwell", 1, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 153, 255));
-        jLabel4.setText("FETAMI");
+        jLabel4.setText("JAYA MAKMUR");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
 
         add(jPanel2, "card3");
