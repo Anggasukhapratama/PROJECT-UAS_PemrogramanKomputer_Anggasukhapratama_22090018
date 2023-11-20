@@ -19,7 +19,7 @@ public class KoneksiDatabase {
          if (KoneksiDatabase==null){
              try {
                   String url;
-                  url= "jdbc:mysql://localhost:3306/adminlogin";
+                  url= "jdbc:mysql://localhost:3306/petshop";
                   String ussername ="root";
                   String password = "";
                   DriverManager.registerDriver(new com.mysql.jdbc.Driver());

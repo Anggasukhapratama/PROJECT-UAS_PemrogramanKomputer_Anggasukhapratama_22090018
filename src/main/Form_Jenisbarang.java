@@ -3,16 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package main;
-
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author ASUS
  */
 public class Form_Jenisbarang extends javax.swing.JPanel {
+    
 
-    /**
-     * Creates new form Form_Jenisbarang
-     */
+
     public Form_Jenisbarang() {
         initComponents();
     }
@@ -29,105 +28,109 @@ public class Form_Jenisbarang extends javax.swing.JPanel {
         mainpanel = new javax.swing.JPanel();
         JenisBarang = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        tbl_jenisbarang = new javax.swing.JTable();
+        btn_tambah = new javax.swing.JButton();
+        btn_hapus = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        txt_caribarang = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        txt_kodebarang = new javax.swing.JTextField();
+        txt_jenisbarang = new javax.swing.JTextField();
 
         setLayout(new java.awt.CardLayout());
 
         mainpanel.setLayout(new java.awt.CardLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        JenisBarang.setBackground(new java.awt.Color(255, 255, 255));
+        JenisBarang.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tbl_jenisbarang.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Kode Barang", "Jenis Barang"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(tbl_jenisbarang);
 
-        jButton1.setText("BATAL");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        JenisBarang.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 74, 393, 286));
+
+        btn_tambah.setBackground(new java.awt.Color(102, 255, 255));
+        btn_tambah.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btn_tambah.setForeground(new java.awt.Color(255, 255, 255));
+        btn_tambah.setText("TAMBAH");
+        btn_tambah.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_tambahActionPerformed(evt);
             }
         });
+        JenisBarang.add(btn_tambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 290, 110, 38));
 
-        jButton2.setText("TAMBAH");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
-        jButton3.setText("HAPUS");
+        btn_hapus.setBackground(new java.awt.Color(102, 255, 255));
+        btn_hapus.setFont(new java.awt.Font("Segoe UI Black", 1, 18)); // NOI18N
+        btn_hapus.setForeground(new java.awt.Color(255, 255, 255));
+        btn_hapus.setText("HAPUS");
+        JenisBarang.add(btn_hapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 290, 110, 38));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(102, 255, 255));
         jLabel1.setText("Jenis Barang");
+        JenisBarang.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, -1, -1));
 
-        javax.swing.GroupLayout JenisBarangLayout = new javax.swing.GroupLayout(JenisBarang);
-        JenisBarang.setLayout(JenisBarangLayout);
-        JenisBarangLayout.setHorizontalGroup(
-            JenisBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(JenisBarangLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(JenisBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(JenisBarangLayout.createSequentialGroup()
-                        .addGroup(JenisBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1)
-                            .addGroup(JenisBarangLayout.createSequentialGroup()
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 373, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
-        );
-        JenisBarangLayout.setVerticalGroup(
-            JenisBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, JenisBarangLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
-                .addGroup(JenisBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 384, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel2.setText("Kode Barang");
+        JenisBarang.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 100, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel3.setText("Cari Barang");
+        JenisBarang.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 10, -1, -1));
+
+        txt_caribarang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txt_caribarangActionPerformed(evt);
+            }
+        });
+        JenisBarang.add(txt_caribarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 30, 240, 30));
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
+        jLabel4.setText("Jenis Barang");
+        JenisBarang.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, -1, 20));
+        JenisBarang.add(txt_kodebarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 290, 40));
+        JenisBarang.add(txt_jenisbarang, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 210, 290, 40));
 
         mainpanel.add(JenisBarang, "card2");
 
         add(mainpanel, "card2");
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btn_tambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_tambahActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btn_tambahActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void txt_caribarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txt_caribarangActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_txt_caribarangActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel JenisBarang;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton btn_hapus;
+    private javax.swing.JButton btn_tambah;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JPanel mainpanel;
+    private javax.swing.JTable tbl_jenisbarang;
+    private javax.swing.JTextField txt_caribarang;
+    private javax.swing.JTextField txt_jenisbarang;
+    private javax.swing.JTextField txt_kodebarang;
     // End of variables declaration//GEN-END:variables
 }

@@ -128,16 +128,15 @@ private boolean showing =false;
         public void run() {
             for (int i = subMenu.size() - 1; i >= 0; i--) {
                 try {
-                    Thread.sleep(20); // Sleep for 100 milliseconds
+                    Thread.sleep(20); // Sleep for 20 milliseconds
                 } catch (InterruptedException e) {
                     // Handle the exception appropriately
                 }
                 subMenu.get(i).setVisible(false);
                 subMenu.get(i).hideMenu();
-            }
+            }            showing = false;
             getParent().repaint();
             getParent().revalidate();
-            showing = false;
         }
     }).start();
 }
@@ -148,11 +147,12 @@ private void showMenu() {
         public void run() {
             for (int i = 0; i < subMenu.size(); i++) {
                 try {
-                    Thread.sleep(20); // Sleep for 100 milliseconds
+                    Thread.sleep(20); // Sleep for 20 milliseconds
                 } catch (InterruptedException e) {
                     // Handle the exception appropriately
                 }
                 subMenu.get(i).setVisible(true);
+                subMenu.get(i).showMenu(); // Recursively show submenus
             }
             showing = true;
             getParent().repaint();
